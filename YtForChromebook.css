@@ -5,24 +5,23 @@ body {
 }
 p{
     color:#f00;
-    font-size: 15px;
+    font-size: 1vw;
     font-weight:500;
-    line-height:1;
     font-family: "Nanum Pen Script", system-ui;
 }
 h1{
     color:#f00;
-    font-size:70px;
+    font-size:10vw;
     font-weight:50;
     line-height:1;
 }
 input { 
-    width: 400px; 
-    padding: 10px; 
+    width: 40vw; 
+    padding: 5vw; 
 }
 iframe { 
-    margin-top: 20px; 
-    width: 560px; 
-    height: 315px; 
+    margin-top: 7vw; 
+    width: 30vw; 
+    height: 25vw; 
     border: none; 
 }
