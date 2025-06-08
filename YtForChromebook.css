@@ -1,0 +1,28 @@
+body {
+    background-color:#000;
+    font-family: "Nanum Myeongjo", system-ui;
+    text-align:center;
+}
+p{
+    color:#f00;
+    font-size: 15px;
+    font-weight:500;
+    line-height:1;
+    font-family: "Nanum Pen Script", system-ui;
+}
+h1{
+    color:#f00;
+    font-size:70px;
+    font-weight:50;
+    line-height:1;
+}
+input { 
+    width: 400px; 
+    padding: 10px; 
+}
+iframe { 
+    margin-top: 20px; 
+    width: 560px; 
+    height: 315px; 
+    border: none; 
+}

@@ -1,0 +1,25 @@
+body {
+    background-color:#000;
+    text-align:center;
+}
+h1{
+    color:#fff;
+    font-size:10vh;
+    font-weight:50;
+    margin:0;
+    font-family: "Nanum Myeongjo", system-ui
+}
+
+h3{
+    color:#ddd;
+    font-size:7vh;
+    font-weight:100;
+    margin-top:0;
+    margin-bottom:0;
+    font-family: "Nanum Myeongjo" ,"cursive";
+}
+img{
+    height: 75vh;
+}
+
+

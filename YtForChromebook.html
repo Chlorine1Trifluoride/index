@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <name="viewport" content="width=device-width, initial-scale=1.0"></name>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=Heebo:wght@100..900&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Song+Myung&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="YtForChromebook.css">
+  <title>크롬북 유튜브 우회 사이트</title>
+</head>
+<body>
+
+  <h1> Chromebook 사용자를 위한 <br> Youtube 재생 사이트</h1>
+  <input type="text" id="url" placeholder="유튜브 영상 URL을 입력하세요">
+  <button onclick="embed()">영상 불러오기</button>
+  <p>학교에 방화하고 싶다</p>
+
+  <div id="player"></div>
+
+  <script>
+    function extractVideoID(url) {
+      // 다양한 유튜브 URL 패턴 지원
+      const regex = /(?:youtube\.com\/.*v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+      const match = url.match(regex);
+      return match ? match[1] : null;
+    }
+
+    function embed() {
+      const input = document.getElementById('url').value;
+      const videoId = extractVideoID(input);
+
+      if (videoId) {
+        const embedHTML = `
+          <iframe 
+            src="https://www.youtube.com/embed/${videoId}" 
+            allowfullscreen>
+          </iframe>`;
+        document.getElementById('player').innerHTML = embedHTML;
+      } else {
+        alert("올바른 유튜브 영상 주소를 입력하세요.");
+      }
+    }
+  </script>
+
+</body>
+</html>
