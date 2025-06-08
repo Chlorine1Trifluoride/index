@@ -24,3 +24,7 @@ iframe {
     height: 5vw; 
     border: none; 
 }
+button {
+    width:5vw;
+    padding:1vh;
+}
