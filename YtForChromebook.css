@@ -15,7 +15,7 @@ h1{
     font-weight:50;
 }
 input { 
-    width: 40vw; 
+    width: 60vw; 
     height: 5vh; 
 }
 iframe { 
@@ -25,6 +25,6 @@ iframe {
     border: none; 
 }
 button {
-    width:5vw;
+    width:20vw;
     height:5vh;
 }
