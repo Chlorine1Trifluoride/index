@@ -1,8 +1,13 @@
 body {
-    background-color:#fff;
+  background:linear-gradient(rgba(0,0,0,0.5)),url('https://i.pinimg.com/736x/35/d8/48/35d848a665f27f3c75f0e8234f7f69ce.jpg');
+  background-attachment:fixed;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  color:white;
 }
 p{
-    color:#f00;
+  color :#f00;
     margin:0;
     font-size: 2vh;
     font-weight:500;
@@ -10,7 +15,6 @@ p{
     margin:0;
 }
 h1{
-    color:#000;
     margin-bottom:0;
     font-size:10vh;
     font-weight:50;
@@ -18,14 +22,12 @@ h1{
     font-family: "Nanum Myeongjo", system-ui;
 }
 h2{
-    color:#444;
     margin:0;
     font-size:7vh;
     font-weight:50;
     font-family: "Song Myung", system-ui;
 }
 h3{
-    color:#333;
     margin:0;
     font-size:5vh;
     font-weight:100;
@@ -33,7 +35,7 @@ h3{
     font-family: "Nanum Myeongjo" ,"cursive";
 }
 a{
-    color: #0af;
+  color:#0af;
     margin:0;
     font-weight:15;
     font-size:5vh;
@@ -41,7 +43,6 @@ a{
     text-decoration:none;    
 }
 li{
-    color: #444;
     margin:0;   
     font-weight:15;
     font-size:7vh;
