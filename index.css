@@ -1,5 +1,5 @@
 body {
-  background:linear-gradient(rgba(0,0,0,0.5)),url('https://i.pinimg.com/736x/35/d8/48/35d848a665f27f3c75f0e8234f7f69ce.jpg');
+  background:linear-gradient(rgba(0,0,0,0.5)),url('bono.jpeg');
   background-attachment:fixed;
   background-size:cover;
   background-repeat:no-repeat;
@@ -16,15 +16,15 @@ body {
 	grid-column: span 3;
 	grid-row:1;
 }
-.진로{
+.1{
 	grid-column:1;
 	grid-row:span 3;
 }
-.자료조사{
+.2{
 	grid-column:2;
 	grid-row:span 3;
 }
-.기타{
+.4{
 	grid-column:3;
 	grid-row:span 3;
 }
