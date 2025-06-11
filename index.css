@@ -1,5 +1,5 @@
 body {
-	background:linear-gradient(rgba(0,0,0,0.5)),url('bono.jpeg');
+	background:linear-gradient(rgba(0,0,0,0.5)),url('bonobono.jpeg');
 	background-attachment:fixed;
 	background-size:cover;
 	background-repeat:no-repeat;
@@ -13,7 +13,7 @@ body {
 	justify-items:center;
 }
 .title{
-	grid-column: span 3;
+	grid-column:span 3;
 	grid-row:1;
 }
 .1{
@@ -31,9 +31,9 @@ body {
 p{
 	color:#f00;
 	margin:0;
-	font-size: 2vh;
+	font-size:2vh;
 	font-weight:500;
-	font-family: "Nanum Pen Script", system-ui;
+	font-family:"Nanum Pen Script", system-ui;
 }
 h1{
 	margin-bottom:0;
@@ -45,13 +45,13 @@ h2{
 	margin:0;
 	font-size:7vh;
 	font-weight:50;
-	font-family: "Song Myung", system-ui;
+	font-family:"Song Myung", system-ui;
 }
 h3{
 	margin:0;
 	font-size:5vh;
 	font-weight:100;
-	text-align: center;
+	text-align:center;
 }
 a{
 	margin:0;
