@@ -1,0 +1,68 @@
+body {
+  background:linear-gradient(rgba(0,0,0,0.5)),url('https://i.pinimg.com/736x/35/d8/48/35d848a665f27f3c75f0e8234f7f69ce.jpg');
+  background-attachment:fixed;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  color:white;
+	font-family: "Nanum Myeongjo", system-ui;
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	grid-template-rows:repeat(4,1fr);
+	gap:1vw;
+	justify-items:center;
+}
+.title{
+	grid-column: span 3;
+	grid-row:1;
+}
+.진로{
+	grid-column:1;
+	grid-row:span 3;
+}
+.자료조사{
+	grid-column:2;
+	grid-row:span 3;
+}
+.기타{
+	grid-column:3;
+	grid-row:span 3;
+}
+p{
+  color :#f00;
+    margin:0;
+    font-size: 2vh;
+    font-weight:500;
+    font-family: "Nanum Pen Script", system-ui;
+    margin:0;
+}
+h1{
+    margin-bottom:0;
+    font-size:10vh;
+    font-weight:50;
+    text-align:center;
+}
+h2{
+    margin:0;
+    font-size:7vh;
+    font-weight:50;
+    font-family: "Song Myung", system-ui;
+}
+h3{
+    margin:0;
+    font-size:5vh;
+    font-weight:100;
+    text-align: center;
+}
+a{
+    margin:0;
+    font-weight:15;
+    font-size:5vh;
+    text-decoration:none;
+		color:white;
+}
+li{
+    margin:0;   
+    font-weight:15;
+    font-size:7vh;
+}
