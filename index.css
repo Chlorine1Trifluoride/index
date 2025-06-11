@@ -1,6 +1,5 @@
 body {
 	background:linear-gradient(rgba(0,0,0,0.5)),url("bonobono.jpg");
-	background-attachment:fixed;
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-position:center;
@@ -8,25 +7,34 @@ body {
 	font-family: "Nanum Myeongjo", system-ui;
 	display:grid;
 	grid-template-columns:repeat(3,1fr);
-	grid-template-rows:repeat(4,1fr);
+	grid-template-rows:repeat(5,1fr);
 	gap:1vw;
 	justify-items:center;
 }
 .title{
-	grid-column:span 3;
+	grid-column:1/span 3;
 	grid-row:1;
+	border-bottom:1px solid white;
 }
 .a{
 	grid-column:1;
-	grid-row:span 3;
+	grid-row:2/span 3;
+	border-right:1px solid white;
 }
 .b{
 	grid-column:2;
-	grid-row:span 3;
+	grid-row:2/span 3;
+	border-right:1px solid white;
 }
 .c{
 	grid-column:3;
-	grid-row:span 3;
+	grid-row:2/span 3;
+	border-right:1px solid white;
+}
+.d{
+	grid-column:1/span 3
+	grid-row:3
+	border-top:1px solid white;
 }
 p{
 	color:#f00;
