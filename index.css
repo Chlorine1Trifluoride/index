@@ -18,26 +18,21 @@ body {
 .a{
 	grid-column:1;
 	grid-row:2/span 3;
-	border-right:1px solid white;
-	border-left:1px solid white;
 }
 .b{
 	grid-column:2;
 	grid-row:2/span 3;
-	border-right:1px solid white;
-	border-left:1px solid white;
 }
 .c{
 	grid-column:3;
 	grid-row:2/span 3;
-	border-right:1px solid white;
-	border-left:1px solid white;
 }
 .d{
 	grid-column:1/span 3
 	grid-row:3
 	border-top:1px solid white;
 }
+
 p{
 	color:#f00;
 	margin:0;
