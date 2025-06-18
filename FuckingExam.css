@@ -1,6 +1,14 @@
 body{
   background-color:#000;
-  color:#0f0;
+  color:#f00;
   font-family:"Nanum myeongjo";
   font-size:1vw;
+}
+h1{
+  font-size:2vw;
+  text-align:right;
+  font-family:"Nanum myeongjo";
+  font-size:30vw;
+  color:#fff;
+  text-shadow: 2vw 1vw 1vw rgba(255,255,255,0.5);
 }
