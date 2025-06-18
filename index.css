@@ -5,33 +5,34 @@ body {
 	background-position:center;
 	color:white;;
 	font-family: "Nanum Myeongjo", system-ui;
-	display:grid;
-	grid-template-columns:repeat(3,1fr);
-	grid-template-rows:repeat(5,1fr);
-	justify-items:center;
+	display:flex;
+
 }
 .title{
 	grid-column:1/span 3;
 	grid-row:1;
 	border-bottom:1px solid white;
 }
+.content{
+	display:grid;
+	grid-template-columns:repeat(3,1fr);
+	justify-items:center;
+}
 .a{
 	grid-column:1;
-	grid-row:2/span 3;
 }
 .b{
 	grid-column:2;
-	grid-row:2/span 3;
 }
 .c{
 	grid-column:3;
-	grid-row:2/span 3;
 }
 .d{
 	grid-column:1/span 3;
 	grid-row:3;
 	border-top:1px solid white;
 }
+
 
 p{
 	color:#f00;
