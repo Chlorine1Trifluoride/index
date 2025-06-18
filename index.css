@@ -1,9 +1,9 @@
 body {
-	background:linear-gradient(rgba(255,255,255,0.5)),url('https://i.pinimg.com/736x/35/d8/48/35d848a665f27f3c75f0e8234f7f69ce.jpg');
+	background:linear-gradient(rgba(0,0,0,0.5)),url('https://i.pinimg.com/736x/35/d8/48/35d848a665f27f3c75f0e8234f7f69ce.jpg');
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-position:center;
-	color:black;
+	color:white;;
 	font-family: "Nanum Myeongjo", system-ui;
 	display:grid;
 	grid-template-columns:repeat(3,1fr);
@@ -13,7 +13,7 @@ body {
 .title{
 	grid-column:1/span 3;
 	grid-row:1;
-	border-bottom:1px solid black;
+	border-bottom:1px solid white;
 }
 .a{
 	grid-column:1;
@@ -30,7 +30,7 @@ body {
 .d{
 	grid-column:1/span 3;
 	grid-row:3;
-	border-top:1px solid black;
+	border-top:1px solid white;
 }
 
 p{
@@ -63,7 +63,7 @@ a{
 	font-weight:100;
 	font-size:5vh;
 	text-decoration:none;
-	color:black;
+	color:white;
 }
 li{
 	margin:0;   
