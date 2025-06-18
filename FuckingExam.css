@@ -5,10 +5,9 @@ body{
   font-size:1vw;
 }
 h1{
-  font-size:2vw;
-  text-align:right;
+  text-align:left;
   font-family:"Nanum myeongjo";
-  font-size:30vw;
+  font-size:10vw;
   color:#fff;
   text-shadow: 2vw 1vw 1vw rgba(255,255,255,0.5);
 }
