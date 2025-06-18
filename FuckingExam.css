@@ -3,6 +3,7 @@ body{
   color:#f00;
   font-family:"Nanum myeongjo";
   font-size:1vw;
+  overflow-wrap:break-word;
 }
 h1{
   text-align:left;
