@@ -6,7 +6,7 @@ body {
 	color:white;
 	font-family: "Nanum Myeongjo", system-ui;
 	display:flex;
-	flex-flow:column wrap;
+	flex-flow:column nowrap;
 	justify-content:stretch;
 	align-items: space-around;
 }
