@@ -7,25 +7,16 @@ body {
 	font-family: "Nanum Myeongjo", system-ui;
 	display:flex;
 	flex-flow:column nowrap;
-	justify-content:stretch;
-	align-items: flex-start;
+	justify-content:center;
+	align-items: center;
 }
-.title{
+.title{	
 	border-bottom:1px solid white;
 }
 .content{
-	display:grid;
-	grid-template-columns:repeat(3,1fr);
-	justify-items:center;
-}
-.a{
-	grid-column:1;
-}
-.b{
-	grid-column:2;
-}
-.c{
-	grid-column:3;
+	display:flex;
+	flex-flow: row wrap;
+	align-items:stretch;
 }
 
 
