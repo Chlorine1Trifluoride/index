@@ -3,14 +3,14 @@ body {
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-position:center;
-	color:white;;
+	color:white;
 	font-family: "Nanum Myeongjo", system-ui;
 	display:flex;
-
+	flex-flow:column wrap;
+	justify-content:stretch;
+	align-items: space-around;
 }
 .title{
-	grid-column:1/span 3;
-	grid-row:1;
 	border-bottom:1px solid white;
 }
 .content{
@@ -26,11 +26,6 @@ body {
 }
 .c{
 	grid-column:3;
-}
-.d{
-	grid-column:1/span 3;
-	grid-row:3;
-	border-top:1px solid white;
 }
 
 
