@@ -11,6 +11,7 @@ body {
 }
 .title{	
 	border-bottom:1px solid white;
+	flex:1 1 auto;
 }
 .content{
 	display:flex;
