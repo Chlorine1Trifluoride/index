@@ -11,10 +11,10 @@ body {
 }
 .title{	
 	border-bottom:1px solid white;
-	flex:1 1 auto;
+	flex:1 1 50%;
 }
 .content{
-	flex: 1 1 auto;
+	flex: 1 1 50%;
 	display:flex;
 	flex-flow: row wrap;
 	align-items:stretch;
