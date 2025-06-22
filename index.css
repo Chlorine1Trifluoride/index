@@ -6,7 +6,7 @@ body {
 	background-position:center;
 	color:white;
 	font-family: "Nanum Myeongjo", system-ui;
-	display:grid;
+	display:flex;
 	
 }
 .title{	
