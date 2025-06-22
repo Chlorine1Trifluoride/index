@@ -1,4 +1,5 @@
 body {
+	height: 100vh;
 	background:black;
 	background:linear-gradient(rgba(0,0,0,0.5)),url('https://i.pinimg.com/736x/35/d8/48/35d848a665f27f3c75f0e8234f7f69ce.jpg');
 	background-size:cover;
@@ -8,7 +9,6 @@ body {
 	font-family: "Nanum Myeongjo", system-ui;
 	display:flex;
 	flex-flow: column nowrap;
-	flex: 1 1 50%
 	
 }
 .title{	
