@@ -13,10 +13,10 @@ body {
 }
 .title{	
 	border-bottom:1px solid white;
-	flex:1 1 0;
+	flex:1 0 20vh;
 }
 .content{
-	flex: 1 1 0;
+	flex: 1 0 80vh;
 	display:flex;
 	flex-flow: row wrap;
 	align-items:stretch;
