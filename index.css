@@ -21,6 +21,8 @@ body {
 	flex-flow: row wrap;
 	align-items:stretch;
 	justify-content:space-around;
+	border-right: 1px solid white;
+	border-left: 1px solid white;
 }
 
 
