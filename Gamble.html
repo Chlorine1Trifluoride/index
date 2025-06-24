@@ -1,293 +1,294 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>가상 도박 시뮬레이터</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-      * { box-sizing: border-box; }
-      body {
-        background: #111;
-        color: #0f0;
-        font-family: 'Courier New', monospace;
-        margin: 0;
-        display: flex;
-        height: 100vh;
-        flex-direction: row;
-      }
-      .left-panel {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        width: 50%;
-        padding: 20px;
-        overflow-y: auto;
-      }
-      .right-panel {
-        width: 50%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-start;
-        padding: 20px;
-      }
-      input, button {
-        font-size: 18px;
-        padding: 10px 15px;
-        background: #000;
-        color: #0f0;
-        border: 2px solid #0f0;
-        margin: 6px;
-        width: 100%;
-      }
-      #log {
-        margin-top: 20px;
-        white-space: pre-wrap;
-        max-height: 200px;
-        overflow-y: auto;
-        font-size: 20px;
-      }
-      .highlight {
-        color: #ff0;
-        font-size: 24px;
-        animation: flash 0.3s ease-in-out;
-      }
-      @keyframes flash {
-        0% { transform: scale(1.2); color: #0f0; }
-        50% { transform: scale(1.4); color: #f00; }
-        100% { transform: scale(1.2); color: #ff0; }
-      }
-      #resetBtn, #gameOverScreen {
-        display: none;
-      }
-      #titleSettings {
-        display: none;
-        width: 100%;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      #titleSettings input, #titleSettings button {
-        width: 100%;
-        margin: 6px;
-        font-size: 18px;
-        padding: 10px 15px;
-        background: #000;
-        color: #0f0;
-        border: 2px solid #0f0;
-      }
-      #settingsToggle {
-        font-size: 24px;
-        background: transparent;
-        border: none;
-        color: #0f0;
-        cursor: pointer;
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        z-index: 1000;
-      }
-      #gameOverScreen {
-        margin-top: 30px;
-        font-size: 20px;
-        color: #f00;
-      }
-      #slogan {
-        margin-top: 20px;
-        font-style: italic;
-        color: #ff0;
-      }
-      #chartContainer {
-        width: 90%;
-        height: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <button id="settingsToggle" onclick="toggleTitleSettings()" aria-label="설정 열기">⚙️</button>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>가상 도박 시뮬레이터</title>
+  <meta name="robots" content="noindex">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      background: #111;
+      color: #0f0;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      flex-direction: row;
+    }
+    .left-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 50%;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .right-panel {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding: 20px;
+    }
+    input, button {
+      font-size: 18px;
+      padding: 10px 15px;
+      background: #000;
+      color: #0f0;
+      border: 2px solid #0f0;
+      margin: 6px;
+      width: 100%;
+    }
+    #log {
+      margin-top: 20px;
+      white-space: pre-wrap;
+      max-height: 200px;
+      overflow-y: auto;
+      font-size: 20px;
+    }
+    .highlight {
+      color: #ff0;
+      font-size: 24px;
+      animation: flash 0.3s ease-in-out;
+    }
+    @keyframes flash {
+      0% { transform: scale(1.2); color: #0f0; }
+      50% { transform: scale(1.4); color: #f00; }
+      100% { transform: scale(1.2); color: #ff0; }
+    }
+    #resetBtn, #gameOverScreen {
+      display: none;
+    }
+    #titleSettings {
+      display: none;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #titleSettings input, #titleSettings button {
+      width: 100%;
+      margin: 6px;
+      font-size: 18px;
+      padding: 10px 15px;
+      background: #000;
+      color: #0f0;
+      border: 2px solid #0f0;
+    }
+    #settingsToggle {
+      font-size: 24px;
+      background: transparent;
+      border: none;
+      color: #0f0;
+      cursor: pointer;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+    }
+    #gameOverScreen {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #f00;
+    }
+    #slogan {
+      margin-top: 20px;
+      font-style: italic;
+      color: #ff0;
+    }
+    #chartContainer {
+      width: 90%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <button id="settingsToggle" onclick="toggleTitleSettings()" aria-label="설정 열기">⚙️</button>
 
-    <div class="left-panel">
-      <h2>💰 보유 금액: <span id="money">1000</span> 만원</h2>
-      <input type="number" id="bet" placeholder="베팅 금액 입력 (만원 단위)" min="1" aria-label="베팅 금액 입력" />
-      <button id="gambleBtn" aria-label="베팅 시작">베팅</button>
-      <button id="resetBtn" onclick="resetGame()" aria-label="게임 초기화">다시 시작</button>
+  <div class="left-panel">
+    <h2>💰 보유 금액: <span id="money">1000</span> 만원</h2>
+    <input type="number" id="bet" placeholder="베팅 금액 입력 (만원 단위)" min="1" aria-label="베팅 금액 입력" />
+    <button id="gambleBtn" aria-label="베팅 시작">베팅</button>
+    <button id="resetBtn" onclick="resetGame()" aria-label="게임 초기화">다시 시작</button>
 
-      <div id="log"></div>
+    <div id="log"></div>
 
-      <div id="gameOverScreen">
-        <div id="finalMessage"></div>
-        <div id="slogan"></div>
-        <div>📈 게임 중 최대 보유 금액: <span id="maxMoney"></span> 만원</div>
-        <button onclick="resetGame()" aria-label="다시 시작">다시 시작</button>
-      </div>
-
-      <div id="titleSettings" style="display: none;">
-        <input type="text" id="titleInput" placeholder="탭 제목 변경" aria-label="탭 제목 입력" onclick="this.select()" />
-        <button onclick="changeTitle()" aria-label="탭 제목 변경">변경</button>
-      </div>
+    <div id="gameOverScreen">
+      <div id="finalMessage"></div>
+      <div id="slogan"></div>
+      <div>📈 게임 중 최대 보유 금액: <span id="maxMoney"></span> 만원</div>
+      <button onclick="resetGame()" aria-label="다시 시작">다시 시작</button>
     </div>
 
-    <div class="right-panel">
-      <div id="chartContainer">
-        <canvas id="moneyChart"></canvas>
-      </div>
+    <div id="titleSettings" style="display: none;">
+      <input type="text" id="titleInput" placeholder="탭 제목 변경" aria-label="탭 제목 입력" onclick="this.select()" />
+      <button onclick="changeTitle()" aria-label="탭 제목 변경">변경</button>
     </div>
+  </div>
 
-    <script>
-      let money = 1000;
-      let maxMoney = 1000;
-      const slogans = [
-        '도박은 중독입니다. 시작은 재미, 끝은 파멸.',
-        '한탕의 유혹, 인생을 잃는 지름길.',
-        '딸 때는 운, 잃을 때는 전재산.',
-        '중독은 치료보다 예방이 중요합니다.',
-        '한방을 노리다 모든 것을 잃는다.',
-        '도박은 운이 아닌 손해 계산입니다.',
-      ];
+  <div class="right-panel">
+    <div id="chartContainer">
+      <canvas id="moneyChart"></canvas>
+    </div>
+  </div>
 
-      const moneyEl = document.getElementById('money');
-      const logEl = document.getElementById('log');
-      const resetBtn = document.getElementById('resetBtn');
-      const betInput = document.getElementById('bet');
-      const gambleBtn = document.getElementById('gambleBtn');
-      const titleInput = document.getElementById('titleInput');
-      const gameOverScreen = document.getElementById('gameOverScreen');
-      const finalMessage = document.getElementById('finalMessage');
-      const slogan = document.getElementById('slogan');
-      const maxMoneyEl = document.getElementById('maxMoney');
+  <script>
+    let money = 1000;
+    let maxMoney = 1000;
+    const slogans = [
+      '도박은 중독입니다. 시작은 재미, 끝은 파멸.',
+      '한탕의 유혹, 인생을 잃는 지름길.',
+      '딸 때는 운, 잃을 때는 전재산.',
+      '중독은 치료보다 예방이 중요합니다.',
+      '한방을 노리다 모든 것을 잃는다.',
+      '도박은 운이 아닌 손해 계산입니다.',
+    ];
 
-      const chartCtx = document.getElementById('moneyChart').getContext('2d');
-      const chartData = {
-        labels: ['Start'],
-        datasets: [
-          { label: '보유 금액 추이', data: [1000], borderColor: '#0f0', backgroundColor: 'transparent', tension: 0.2 },
-        ],
-      };
-      const moneyChart = new Chart(chartCtx, {
-        type: 'line',
-        data: chartData,
-        options: {
-          scales: { y: { beginAtZero: true } },
-        },
-      });
+    const moneyEl = document.getElementById('money');
+    const logEl = document.getElementById('log');
+    const resetBtn = document.getElementById('resetBtn');
+    const betInput = document.getElementById('bet');
+    const gambleBtn = document.getElementById('gambleBtn');
+    const titleInput = document.getElementById('titleInput');
+    const gameOverScreen = document.getElementById('gameOverScreen');
+    const finalMessage = document.getElementById('finalMessage');
+    const slogan = document.getElementById('slogan');
+    const maxMoneyEl = document.getElementById('maxMoney');
 
-      function gamble() {
-        if (money <= 0 || betInput.disabled) return;
-        const bet = parseInt(betInput.value);
-        if (!isValidBet(bet)) return;
+    const chartCtx = document.getElementById('moneyChart').getContext('2d');
+    const chartData = {
+      labels: ['Start'],
+      datasets: [
+        { label: '보유 금액 추이', data: [1000], borderColor: '#0f0', backgroundColor: 'transparent', tension: 0.2 },
+      ],
+    };
+    const moneyChart = new Chart(chartCtx, {
+      type: 'line',
+      data: chartData,
+      options: {
+        scales: { y: { beginAtZero: true } },
+      },
+    });
 
-        const prevMoney = money;
-        const result = generateGambleResult(bet);
-        updateGameState(result);
+    function gamble() {
+      if (money <= 0 || betInput.disabled) return;
+      const bet = parseInt(betInput.value);
+      if (!isValidBet(bet)) return;
 
-        maxMoney = Math.max(maxMoney, money);
-        if (money !== prevMoney) {
-          chartData.labels.push('');
-          chartData.datasets[0].data.push(money);
-          moneyChart.update();
-        }
-        if (money <= 0 || result.includes('🚔')) showGameOver(result);
-      }
+      const prevMoney = money;
+      const result = generateGambleResult(bet);
+      updateGameState(result);
 
-      function isValidBet(bet) {
-        if (isNaN(bet) || bet <= 0) return log('올바른 금액을 입력하세요.'), false;
-        if (bet > money) return log('베팅 금액이 보유 금액보다 많습니다!'), false;
-        return true;
-      }
-
-      function generateGambleResult(bet) {
-        const r = Math.random();
-        if (r < 0.30) {
-          money -= bet;
-          return `😢 실패! ${bet}만원 전액 손실.`;
-        } else if (r < 0.50) {
-          const win = bet * 2;
-          money += win;
-          return `🎉 성공! ${win}만원 획득!`;
-        } else if (r < 0.65) {
-          const jackpot = bet * 5;
-          money += jackpot;
-          return `💥 잭팟! ${jackpot}만원 획득!!!`;
-        } else if (r < 0.85) {
-          const fine = Math.floor(money * 0.10);
-          money -= bet + fine;
-          return `💸 벌금! ${bet}만원 손실 + ${fine}만원 벌금.`;
-        } else if (r < 0.90) {
-          const extraLoss = Math.floor(bet * 0.5);
-          money -= bet + extraLoss;
-          return `📉 떡락! ${bet}만원 손실 + ${extraLoss}만원 추가 손실.`;
-        } else {
-          const boom = bet * 10;
-          money += boom;
-          return `🚀 떡상! ${boom}만원 획득!!!`;
-        }
-      }
-
-      function updateGameState(result) {
-        moneyEl.textContent = money;
-        log(`<span class="highlight">${result}</span>`);
-      }
-
-      function showGameOver(msg) {
-        document.querySelector('input').disabled = true;
-        betInput.disabled = true;
-        gambleBtn.disabled = true;
-        logEl.style.display = 'none';
-        finalMessage.innerHTML = `<span class="highlight">${msg}</span>`;
-        slogan.textContent = slogans[Math.floor(Math.random() * slogans.length)];
-        maxMoneyEl.textContent = maxMoney;
-        gameOverScreen.style.display = 'block';
-      }
-
-      function resetGame() {
-        money = 1000;
-        maxMoney = 1000;
-        moneyEl.textContent = money;
-        logEl.textContent = '';
-        betInput.value = '';
-        betInput.disabled = false;
-        gambleBtn.disabled = false;
-        gameOverScreen.style.display = 'none';
-        logEl.style.display = 'block';
-        chartData.labels = ['Start'];
-        chartData.datasets[0].data = [1000];
+      maxMoney = Math.max(maxMoney, money);
+      if (money !== prevMoney) {
+        chartData.labels.push('');
+        chartData.datasets[0].data.push(money);
         moneyChart.update();
       }
+      if (money <= 0 || result.includes('🚔')) showGameOver(result);
+    }
 
-      function log(msg) {
-        logEl.insertAdjacentHTML('afterbegin', `${msg}<br>`);
+    function isValidBet(bet) {
+      if (isNaN(bet) || bet <= 0) return log('올바른 금액을 입력하세요.'), false;
+      if (bet > money) return log('베팅 금액이 보유 금액보다 많습니다!'), false;
+      return true;
+    }
+
+    function generateGambleResult(bet) {
+      const r = Math.random();
+      if (r < 0.30) {
+        money -= bet;
+        return `😢 실패! ${bet}만원 전액 손실.`;
+      } else if (r < 0.50) {
+        const win = bet * 2;
+        money += win;
+        return `🎉 성공! ${win}만원 획득!`;
+      } else if (r < 0.65) {
+        const jackpot = bet * 5;
+        money += jackpot;
+        return `💥 잭팟! ${jackpot}만원 획득!!!`;
+      } else if (r < 0.85) {
+        const fine = Math.floor(money * 0.10);
+        money -= bet + fine;
+        return `💸 벌금! ${bet}만원 손실 + ${fine}만원 벌금.`;
+      } else if (r < 0.90) {
+        const extraLoss = Math.floor(bet * 0.5);
+        money -= bet + extraLoss;
+        return `📉 떡락! ${bet}만원 손실 + ${extraLoss}만원 추가 손실.`;
+      } else {
+        const boom = bet * 10;
+        money += boom;
+        return `🚀 떡상! ${boom}만원 획득!!!`;
       }
+    }
 
-      function changeTitle() {
-        const newTitle = titleInput.value.trim();
-        if (newTitle.length > 0) {
-          document.title = newTitle;
-          log(`탭 제목이 '${newTitle}'(으)로 변경되었습니다.`);
-        }
+    function updateGameState(result) {
+      moneyEl.textContent = money;
+      log(`<span class="highlight">${result}</span>`);
+    }
+
+    function showGameOver(msg) {
+      document.querySelector('input').disabled = true;
+      betInput.disabled = true;
+      gambleBtn.disabled = true;
+      logEl.style.display = 'none';
+      finalMessage.innerHTML = `<span class="highlight">${msg}</span>`;
+      slogan.textContent = slogans[Math.floor(Math.random() * slogans.length)];
+      maxMoneyEl.textContent = maxMoney;
+      gameOverScreen.style.display = 'block';
+    }
+
+    function resetGame() {
+      money = 1000;
+      maxMoney = 1000;
+      moneyEl.textContent = money;
+      logEl.textContent = '';
+      betInput.value = '';
+      betInput.disabled = false;
+      gambleBtn.disabled = false;
+      gameOverScreen.style.display = 'none';
+      logEl.style.display = 'block';
+      chartData.labels = ['Start'];
+      chartData.datasets[0].data = [1000];
+      moneyChart.update();
+    }
+
+    function log(msg) {
+      logEl.insertAdjacentHTML('afterbegin', `${msg}<br>`);
+    }
+
+    function changeTitle() {
+      const newTitle = titleInput.value.trim();
+      if (newTitle.length > 0) {
+        document.title = newTitle;
+        log(`탭 제목이 '${newTitle}'(으)로 변경되었습니다.`);
       }
+    }
 
-      function toggleTitleSettings() {
-        const settings = document.getElementById('titleSettings');
-        settings.style.display = settings.style.display === 'none' ? 'block' : 'none';
-      }
+    function toggleTitleSettings() {
+      const settings = document.getElementById('titleSettings');
+      settings.style.display = settings.style.display === 'none' ? 'block' : 'none';
+    }
 
-      window.addEventListener('DOMContentLoaded', () => {
-        resetGame();
-        document.getElementById('titleSettings').style.display = 'none';
-      });
+    window.addEventListener('DOMContentLoaded', () => {
+      resetGame();
+      document.getElementById('titleSettings').style.display = 'none';
+    });
 
-      betInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' && !betInput.disabled) gamble();
-      });
+    betInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !betInput.disabled) gamble();
+    });
 
-      titleInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') changeTitle();
-      });
+    titleInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') changeTitle();
+    });
 
-      gambleBtn.addEventListener('click', gamble);
-    </script>
-  </body>
+    gambleBtn.addEventListener('click', gamble);
+  </script>
+</body>
 </html>
