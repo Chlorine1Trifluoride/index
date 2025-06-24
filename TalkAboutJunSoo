@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>대신 욕해드립니다.</title>
+  <style>
+    body {
+      background-color: black;
+      color: #0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1 1 0;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 10vh;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-items: center;
+      align-items: center;
+    }
+
+    input {
+      width: 40vw;
+    }
+
+    button {
+      width: 20vw;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>대신 욕해드립니다.</h1>
+  <div class="container">
+    <input type="text" id="병신" placeholder="병신의 이름을 입력하십시오.">
+    <button onclick="쌍욕('')">입력</button>
+  </div>
+  <script>
+    function 쌍욕() {
+      let 병신이름 = document.getElementById("병신").value;
+      alert(병신이름 + "은(는) 세상에 둘도 없는 병신 머저리 새끼입니다.");
+    }
+  </script>
+</body>
+
+</html>
