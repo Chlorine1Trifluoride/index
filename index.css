@@ -1,18 +1,17 @@
 body {
 	height: 120vh;
 	background:black;
-	background:linear-gradient(rgba(0,0,0,0.5)),url('https://i.pinimg.com/736x/35/d8/48/35d848a665f27f3c75f0e8234f7f69ce.jpg');
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-position:center;
-	color:white;
+	color:#0f0;
 	font-family: "Nanum Myeongjo", system-ui;
 	display:flex;
 	flex-flow: column nowrap;
 	
 }
 .title{	
-	border-bottom:1px solid white;
+	border-bottom:1px solid #0f0;
 	flex:1 0 20vh;
 }
 .content{
@@ -54,7 +53,7 @@ a{
 	font-weight:100;
 	font-size:5vh;
 	text-decoration:none;
-	color:white;
+	color:#0f0;
 }
 li{
 	margin:0;   
