@@ -4,7 +4,7 @@ body {
 	background-repeat:no-repeat;
 	background-position:center;
 	color:#0f0;
-	font-family: "Nanum Myeongjo";
+	font-family: "UnifrakturMaguntia","Nanum Myeongjo";
 	display:flex;
 	flex-flow: column nowrap;
 	
@@ -41,7 +41,7 @@ h2{
 }
 h3{
 	margin:0;
-	font-size:5vh;
+	font-size:8vh;
 	font-weight:100;
 	font-family:"UnifrakturMaguntia";
 	text-align:center;
