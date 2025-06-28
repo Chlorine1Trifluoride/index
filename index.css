@@ -1,16 +1,16 @@
 body {
-	background:black;
+	background:#fff;
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-position:center;
-	color:#0f0;
-	font-family: "UnifrakturMaguntia","Nanum Myeongjo";
+	color:#000;
+	font-family:"Nanum Myeongjo";
 	display:flex;
 	flex-flow: column nowrap;
 	
 }
 .title{	
-	border-bottom:1px solid #0f0;
+	border-bottom:1px solid #000;
 	flex:1 0 20vh;
 }
 .content{
@@ -51,7 +51,7 @@ a{
 	font-weight:100;
 	font-size:5vh;
 	text-decoration:none;
-	color:#0f0;
+	color:#000;
 }
 li{
 	margin:0;   
