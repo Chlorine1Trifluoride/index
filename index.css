@@ -4,7 +4,7 @@ body {
 	background-repeat:no-repeat;
 	background-position:center;
 	color:#0f0;
-	font-family: "monospace", system-ui;
+	font-family: "Fira Code", monotone;
 	display:flex;
 	flex-flow: column nowrap;
 	
@@ -25,9 +25,8 @@ body {
 p{
 	color:#f00;
 	margin:0;
-	font-size:2vh;
+	font-size:1vh;
 	font-weight:500;
-	font-family:"Nanum Pen Script", system-ui;
 }
 h1{
 	margin-bottom:0;
