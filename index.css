@@ -4,7 +4,7 @@ body {
 	background-repeat:no-repeat;
 	background-position:center;
 	color:#0f0;
-	font-family: "Fira Code", monotone;
+	font-family: "Nanum Myeongjo";
 	display:flex;
 	flex-flow: column nowrap;
 	
@@ -43,6 +43,7 @@ h3{
 	margin:0;
 	font-size:5vh;
 	font-weight:100;
+	font-family:"UnifrakturMagnia";
 	text-align:center;
 }
 a{
