@@ -1,0 +1,5 @@
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="index.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Great+Vibes&family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100..900&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
