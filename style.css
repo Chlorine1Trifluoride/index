@@ -1,0 +1,60 @@
+body {
+	background:#fff;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center;
+	color:#000;
+	font-family:"Nanum Myeongjo";
+	display:flex;
+	flex-flow: column nowrap;
+	
+}
+.title{	
+	border-bottom:1px solid #000;
+	flex:1 0 20vh;
+}
+.content{
+	flex: 1 0 80vh;
+	display:flex;
+	flex-flow: row wrap;
+	align-items:stretch;
+	justify-content:space-around;
+}
+
+
+p{
+	color:#f00;
+	margin:0;
+	font-size:1vh;
+	font-weight:500;
+}
+h1{
+	margin-bottom:0;
+	font-size:10vh;
+	font-weight:500;
+	text-align:center;
+}
+h2{
+	margin:0;
+	font-size:7vh;
+	font-weight:500;
+}
+h3{
+	margin:0;
+	font-size:8vh;
+	font-weight:100;
+	font-family:"UnifrakturMaguntia";
+	text-align:center;
+}
+a{
+	margin:0;
+	font-weight:100;
+	font-size:5vh;
+	text-decoration:none;
+	color:#000;
+}
+li{
+	margin:0;   
+	font-weight:100;
+	font-size:5vh;
+}
