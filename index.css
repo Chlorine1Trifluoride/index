@@ -45,7 +45,7 @@ body {
 	display:flex;
 	flex-flow: row wrap;
 	align-items:stretch;
-	justify-content:space-around;
+	justify-content:space-between;
 }
 .content > div{
 	display: flex;
