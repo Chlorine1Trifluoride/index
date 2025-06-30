@@ -47,6 +47,11 @@ body {
 	align-items:stretch;
 	justify-content:space-around;
 }
+.content > div{
+	display: flex;
+	flex-direction : column;
+	align-items : start;
+}
 
 
 p{
