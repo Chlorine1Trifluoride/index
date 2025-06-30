@@ -1,20 +1,46 @@
+:root {
+	--h1: 50px;
+	--h3: 40px;
+	--h2: 30px;
+	--li: 25px;
+	--margin-h1:15px;
+}
+@media (max-width: 1024px) {
+	:root {
+	--h1: 25px;
+	--h3: 20px;
+	--h2: 15px;
+	--li: 13px;
+	--margin-h1:10px;
+	}
+}
+@media (max-width: 480px) {
+	:root {
+	--h1: 20px;
+	--h3: 15px;
+	--h2: 10px;
+	--li: 8px;
+	--margin-h1:5px;
+	}
+}
 body {
 	background:#fff;
-	background-size:cover;
-	background-repeat:no-repeat;
-	background-position:center;
 	color:#000;
 	font-family:"Nanum Myeongjo";
 	display:flex;
 	flex-flow: column nowrap;
+	align-items:center;
 	
 }
 .title{	
 	border-bottom:1px solid #000;
-	flex:1 0 20vh;
+	flex:1 0 calc( var(--margin-h1) + var(--h1) );
+	display:flex;
+	align-items:center;
+	justify-content:center;
 }
 .content{
-	flex: 1 0 80vh;
+	flex: 1 0 auto;
 	display:flex;
 	flex-flow: row wrap;
 	align-items:stretch;
@@ -26,35 +52,29 @@ p{
 	color:#f00;
 	margin:0;
 	font-size:1vh;
-	font-weight:500;
 }
 h1{
 	margin-bottom:0;
-	font-size:10vh;
-	font-weight:500;
+	font-size:var(--h1);
 	text-align:center;
 }
 h2{
 	margin:0;
-	font-size:7vh;
-	font-weight:500;
+	font-size:var(--h2);
 }
 h3{
 	margin:0;
-	font-size:8vh;
-	font-weight:100;
+	font-size:var(--h3);
 	font-family:"UnifrakturMaguntia";
 	text-align:center;
 }
 a{
 	margin:0;
-	font-weight:100;
-	font-size:5vh;
+	font-size: var(--li);
 	text-decoration:none;
 	color:#000;
 }
 li{
 	margin:0;   
-	font-weight:100;
-	font-size:5vh;
+	font-size: var(--li);
 }
