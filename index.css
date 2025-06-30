@@ -1,17 +1,26 @@
 :root {
-	--h1: 50px;
-	--h3: 40px;
-	--h2: 30px;
-	--li: 25px;
-	--margin-h1:15px;
+	--h1: 250px;
+	--h3: 200px;
+	--h2: 150px;
+	--li: 125px;
+	--margin-h1:75px;
 }
 @media (max-width: 1024px) {
 	:root {
-	--h1: 25px;
-	--h3: 20px;
-	--h2: 15px;
-	--li: 13px;
-	--margin-h1:10px;
+	--h1: 125px;
+	--h3: 100px;
+	--h2: 75px;
+	--li: 65px;
+	--margin-h1:50px;
+	}
+}
+@media (max-width: 480px) {
+	:root {
+	--h1: 100px;
+	--h3: 75px;
+	--h2: 50px;
+	--li: 40px;
+	--margin-h1:20px;
 	}
 }
 body {
