@@ -1,26 +1,26 @@
 :root {
-	--h1: 50px;
-	--h3: 40px;
-	--h2: 30px;
-	--li: 25px;
-	--margin-h1:15px;
+	--h1: 500px;
+	--h3: 400px;
+	--h2: 300px;
+	--li: 250px;
+	--margin-h1:150px;
 }
 @media (max-width: 1024px) {
 	:root {
-	--h1: 25px;
-	--h3: 20px;
-	--h2: 15px;
-	--li: 13px;
-	--margin-h1:10px;
+	--h1: 250px;
+	--h3: 200px;
+	--h2: 150px;
+	--li: 130px;
+	--margin-h1:100px;
 	}
 }
 @media (max-width: 480px) {
 	:root {
-	--h1: 20px;
-	--h3: 15px;
-	--h2: 10px;
-	--li: 8px;
-	--margin-h1:5px;
+	--h1: 200px;
+	--h3: 150px;
+	--h2: 100px;
+	--li: 80px;
+	--margin-h1:50px;
 	}
 }
 body {
@@ -36,8 +36,9 @@ body {
 	border-bottom:1px solid #000;
 	flex:1 0 calc( var(--margin-h1) + var(--h1) );
 	display:flex;
+	flex-direction:column;
 	align-items:center;
-	justify-content:center;
+	justify-content:end;
 }
 .content{
 	flex: 1 0 auto;
