@@ -1,9 +1,9 @@
 :root {
-	--h1: 50px;
-	--h3: 40px;
-	--h2: 30px;
-	--li: 20px;
-	--margin-h1:10px;
+	--h1: 300px;
+	--h3: 250px;
+	--h2: 200px;
+	--li: 180px;
+	--margin-h1:100px;
 }
 @media (max-width: 1024px) {
 	:root {
