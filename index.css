@@ -1,9 +1,8 @@
 :root {
-	--h1: 150px;
-	--h3: 120px;
-	--h2: 90px;
-	--li: 80px;
-	--margin-h1:70px;
+	--h1: 100px;
+	--h3: 80px;
+	--h2: 60px;
+	--li: 40px;
 }
 @media (max-width: 1024px) {
 	:root {
@@ -11,16 +10,14 @@
 	--h3: 100px;
 	--h2: 75px;
 	--li: 65px;
-	--margin-h1:50px;
 	}
 }
 @media (max-width: 480px) {
 	:root {
-	--h1: 90px;
-	--h3: 60px;
-	--h2: 50px;
-	--li: 40px;
-	--margin-h1:20px;
+	--h1: 5vw;
+	--h3: 3vw;
+	--h2: 2vw;
+	--li: 1.5vw;
 	}
 }
 body {
@@ -33,7 +30,7 @@ body {
 }
 .title{	
 	border-bottom:1px solid #000;
-	flex:1 0 calc( var(--margin-h1) + var(--h1) );
+	flex:1 0 var(--h1);
 	display:flex;
 	flex-direction:column;
 	align-items:center;
@@ -59,7 +56,7 @@ p{
 	font-size:1vh;
 }
 h1{
-	margin-bottom:0;
+	margin:0;
 	font-size:var(--h1);
 	text-align:center;
 }
