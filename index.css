@@ -1,9 +1,9 @@
 :root {
-	--h1: 300px;
-	--h3: 250px;
-	--h2: 200px;
-	--li: 180px;
-	--margin-h1:100px;
+	--h1: 150px;
+	--h3: 120px;
+	--h2: 90px;
+	--li: 80px;
+	--margin-h1:70px;
 }
 @media (max-width: 1024px) {
 	:root {
@@ -16,8 +16,8 @@
 }
 @media (max-width: 480px) {
 	:root {
-	--h1: 100px;
-	--h3: 75px;
+	--h1: 90px;
+	--h3: 60px;
 	--h2: 50px;
 	--li: 40px;
 	--margin-h1:20px;
