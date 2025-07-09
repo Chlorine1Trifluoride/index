@@ -4,15 +4,15 @@
 	--h2: 60px;
 	--li: 40px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 0px) {
 	:root {
-	--h1: 125px;
-	--h3: 100px;
-	--h2: 75px;
-	--li: 65px;
+	--h1: 70px;
+	--h3: 50px;
+	--h2: 30px;
+	--li: 30px;
 	}
 }
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
 	:root {
 	--h1: 5vw;
 	--h3: 3vw;
