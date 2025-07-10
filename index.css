@@ -1,18 +1,18 @@
 :root {
-	--h1: 100px;
-	--h3: 80px;
-	--h2: 60px;
-	--li: 40px;
-}
-@media (max-width: 0px) {
-	:root {
 	--h1: 70px;
 	--h3: 50px;
 	--h2: 30px;
-	--li: 30px;
+	--li: 20px;
+}
+@media (max-width: 768px) and (orientation: portrait) {
+	:root {
+	--h1: 10vw;
+	--h3: 6vw;
+	--h2: 4vw;
+	--li: 3vw;
 	}
 }
-@media (max-width: 1024px) {
+@media (max-width: 1024px), (orientation: landscape) {
 	:root {
 	--h1: 5vw;
 	--h3: 3vw;
